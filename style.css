@@ -1,0 +1,57 @@
+/* Reset style CSS, selecteur universel */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Selection de type */
+a {
+    color: black;
+}
+
+/* Selection avec un ID */
+#header {
+    background-color: lightblue;
+}
+
+/* Selection avec une class */
+.header {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.header_logo {
+    background-color: lightcoral;
+}
+
+/* Selection avec une class et l'opérateur > */
+.header_logo > img {
+    display: none;
+    width: 80px;
+    height: 80px;
+}
+
+.header_navigation {
+    background-color: lightgreen;
+    display: none;
+    align-items: end;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* Les screen de largeur supérieur à 780px */
+@media screen and (min-width: 780px) {
+    .header {
+        height: unset;
+    }
+
+    .header_logo > img {
+        display: flex;
+    }
+
+    .header_navigation {
+        display: flex;
+    }
+}
